@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Label prefHeight="30.0" prefWidth="120.0" text="Number:">
+            <VBox.margin>
+                <Insets left="15.0" top="15.0" />
+            </VBox.margin>
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="textField" prefHeight="35.0" prefWidth="370.0">
+            <VBox.margin>
+                <Insets left="15.0" right="15.0" />
+            </VBox.margin>
+        </TextField>
+        <Label prefHeight="30.0" prefWidth="100.0" text="From base:">
+            <VBox.margin>
+                <Insets left="15.0" />
+            </VBox.margin>
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+      <ComboBox fx:id="comboBox1" prefHeight="35.0" prefWidth="370.0" promptText="10 (decimal)" visibleRowCount="4">
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" />
+         </VBox.margin>
+      </ComboBox>
+        <Label prefHeight="30.0" prefWidth="120.0" text="To base:">
+            <VBox.margin>
+                <Insets left="15.0" />
+            </VBox.margin>
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+      <ComboBox fx:id="comboBox2" prefHeight="35.0" prefWidth="370.0" promptText="16 (hex)" visibleRowCount="4">
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" />
+         </VBox.margin></ComboBox>
+        <HBox prefHeight="45.0" prefWidth="370.0">
+            <VBox.margin>
+                <Insets left="15.0" right="15.0" top="15.0" />
+            </VBox.margin>
+            <children>
+                <Button fx:id="convert" mnemonicParsing="false" onAction="#pressConvert" prefHeight="41.0" prefWidth="75.0" text="🔃 Convert">
+                    <HBox.margin>
+                        <Insets bottom="2.0" right="5.0" top="2.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="reset" mnemonicParsing="false" onAction="#pressReset" prefHeight="41.0" prefWidth="75.0" text="✖ Reset">
+                    <HBox.margin>
+                        <Insets bottom="2.0" right="5.0" top="2.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="swap" mnemonicParsing="false" onAction="#pressSwap" prefHeight="41.0" prefWidth="75.0" text="🔁 Swap">
+                    <HBox.margin>
+                        <Insets bottom="2.0" right="5.0" top="2.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+        <Label prefHeight="30.0" prefWidth="120.0" text="Result number:">
+            <VBox.margin>
+                <Insets left="15.0" top="15.0" />
+            </VBox.margin>
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="textArea" disable="true" prefHeight="80.0" prefWidth="370.0">
+            <VBox.margin>
+                <Insets left="15.0" right="15.0" />
+            </VBox.margin>
+         <font>
+            <Font size="20.0" />
+         </font>
+        </TextArea>
+        <Button fx:id="copy" mnemonicParsing="false" onAction="#pressCopy" prefHeight="30.0" prefWidth="50.0" text="Copy">
+            <VBox.margin>
+                <Insets left="15.0" top="5.0" />
+            </VBox.margin>
+        </Button>
+    </children>
+</VBox>
